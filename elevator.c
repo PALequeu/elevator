@@ -22,16 +22,16 @@ Building *create_building(int nbFloor, Elevator *elevator, PersonList **waitingL
 };
 
 PersonList* exitElevator(Elevator *e){
-    PersonList *persons = *(e+3);
+    PersonList *persons = e->waitingLists;
 
     PersonList newlist = NULL;
 
     while (*persons != NULL){
-        person = *persons;
-        if (*(person+1) != *(e+2)) {
-            newlist = insert(person,newlist)
+        person = persons->person;
+        if ((person->dest) != (e->currentFloor)) {
+            newlist = insert(person,newlist);
         }
-        persons = *(persons+1)
+        persons = persons->next;
 
     }
 }
