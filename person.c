@@ -1,17 +1,17 @@
 #include"person.h"
 
 Person* createPerson(int src, int dest) {
-    Person *p = malloc(sizeof(Person));
-    p -> src=src;
-    p -> dest=dest;
+    Person *per = malloc(sizeof(Person));
+    per -> src=src;
+    per -> dest=dest;
 
     return p;
 };
 
 PersonList* insert(Person *p, PersonList *list) {
-    PersonList *new_list = malloc(sizeof(PersonList));
-    new_list -> person=p;
-    new_list -> next=list;
+    PersonList *newlist = malloc(sizeof(PersonList));
+    newlist -> person=p;
+    newlist -> next=list;
 
-    return new_list;
+    return newlist;
 };
