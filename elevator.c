@@ -2,15 +2,17 @@
 #include"person.h"
 #include"elevator.h"
 
-Elevator *create_elevator(int capacity, int currentFloor, PersonList *persons) {
+Elevator *create_elevator(int capacity, int currentFloor, PersonList* persons) {
     Elevator *e = malloc(sizeof(Elevator));
     e -> capacity=capacity;
     e -> currentFloor=currentFloor;
     e -> targetFloor=currentFloor;
     e -> persons=persons;
 
-    return e
+    return e;
 };
+
+
 
 Building *create_building(int nbFloor, Elevator *elevator, PersonList **waitingLists) {
     Building *b = malloc(sizeof(Building));
@@ -18,58 +20,61 @@ Building *create_building(int nbFloor, Elevator *elevator, PersonList **waitingL
     b ->elevator=elevator;
     b ->waitingLists=waitingLists;
 
-    return b
+    return b;
 };
 
-int lengthOf(PersonList* list){
-    if (list->next != NULL)
-        {return 1 + lengthOf(list->next)}
-    else
-        {return 1}
+
+int size(PersonList* list){
+    int n=0;
+    while(list){
+        n++;
+        list = list -> next;
+    }
+    return n;
 };
 
 
 PersonList* exitElevator(Elevator *e){
     PersonList *persons = e->persons;
-    PersonList newlist = NULL;
+    PersonList *newlist = NULL;
 
-    while (*persons != NULL){
-        person = persons->person;
+    while (persons){
+        Person *person = persons->person;
         if (person->src != e->currentFloor) {
             newlist = insert(person,newlist);
         }
         persons = persons->next;
     }
 
-    return newlist
+    return newlist;
 };
+
 
 PersonList* enterElevator(Elevator *e, PersonList *list){
     PersonList* personsElevator = e->persons;
-    PersonList* personsFloor = list
+    PersonList* personsFloor = list;
     
-    while (lengthOf(personsElevator) < e->capacity){
+    while (size(personsElevator) < e->capacity){
         personsElevator= insert(personsFloor->person,personsElevator);
         personsFloor = personsFloor->next;   
     }
 
-    return personsElevator
+    return personsElevator;
 };
 
 void stepElevator(Building *b){
     Elevator* elevator = b->elevator;
-
-    while(elevator->currentFloor != elevator->targetFloor){
-        if (elevator->currentFloor > elevator->targetFloor){
-            elevator->currentFloor = elevator->currentFloor - 1
+    
+    if (elevator->currentFloor > elevator->targetFloor){
+            elevator->currentFloor = elevator->currentFloor - 1;
         }
-        else{
-            elevator->currentFloor = elevator->currentFloor + 1
+    else if(elevator->currentFloor < elevator->targetFloor){
+            elevator->currentFloor = elevator->currentFloor + 1;
         }
-    }
-
-    exitElevator(elevator);
-    enterElevator(elevator,(e->waitingLists)[(elevator->currentFloor)-1])
+    
+    if(elevator->currentFloor == elevator->targetFloor)
+    {exitElevator(elevator);
+    enterElevator(elevator,(b->waitingLists)[(elevator->currentFloor)-1]);};
 };
 
 

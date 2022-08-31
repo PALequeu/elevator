@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Aug 25 17:47:51 2022
+# Make data base, printed on Wed Aug 31 15:09:26 2022
 
 # Variables
 
@@ -47,13 +47,13 @@ VSCODE_CWD = /mnt/c/Users/pierr/AppData/Local/Programs/Microsoft VS Code
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
-PATH = /home/palequeu/.vscode-server/bin/6d9b74a70ca9c7733b29f0456fd8195364076dda/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/Python310/Scripts/:/mnt/c/Python310/:/mnt/c/Program Files/nodejs/node.exe:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files/nodejs/:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/pierr/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/pierr/AppData/Roaming/npm:/mnt/c/Users/pierr/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files/Java/jdk-17.0.2/bin:/snap/bin
+PATH = /home/palequeu/.vscode-server/bin/e4503b30fc78200f846c62cf8091b76ff5547662/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/Python310/Scripts/:/mnt/c/Python310/:/mnt/c/Program Files/nodejs/node.exe:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files/nodejs/:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/pierr/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/pierr/AppData/Roaming/npm:/mnt/c/Users/pierr/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files/Java/jdk-17.0.2/bin:/snap/bin
 # environment
 XDG_RUNTIME_DIR = /mnt/wslg/runtime-dir
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-734dcaeb-44bd-4932-a41b-30daa903c399.sock
+VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-c76500de-0332-479f-9f27-e94ae9b1f78d.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -79,7 +79,7 @@ LESSCLOSE = /usr/bin/lesspipe %s %s
 # environment
 LOGNAME = palequeu
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # automatic
@@ -97,7 +97,7 @@ MAKE_VERSION := 4.2.1
 # environment
 USER = palequeu
 # makefile
-.DEFAULT_GOAL := 
+.DEFAULT_GOAL := person.o
 # environment
 NAME = Code
 # automatic
@@ -149,7 +149,7 @@ WSL_DISTRO_NAME = Ubuntu
 # environment
 MOTD_SHOWN = update-motd
 # variable set hash-table stats:
-# Load=68/1024=7%, Rehash=0, Collisions=4/92=4%
+# Load=68/1024=7%, Rehash=0, Collisions=4/93=4%
 
 # Pattern-specific Variable Values
 
@@ -157,9 +157,9 @@ MOTD_SHOWN = update-motd
 
 # Directories
 
-# . (device 2080, inode 50289): 13 files, no impossibilities.
+# . (device 2080, inode 50289): 17 files, no impossibilities.
 
-# 13 files, no impossibilities in 1 directories.
+# 17 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -175,11 +175,41 @@ all:
 #  File has not been updated.
 
 # Not a target:
+main.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+person.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-24 09:03:06.2496757
+#  Last modified 2022-08-30 18:21:51.6532346
 #  File has been updated.
 #  Successfully updated.
+
+# Not a target:
+elevator.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+person.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+elevator.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 .DEFAULT:
@@ -187,20 +217,62 @@ Makefile:
 #  Modification time never checked.
 #  File has not been updated.
 
+run:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 14):
+	./TDelev
+
+clean:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 17):
+	rm -f main *.o
+
+main: main.o person.o elevator.o
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 11):
+	gcc -o TDelev person.o elevator.o main.o -lncurses
+
+main.o: main.c person.o elevator.o
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 8):
+	gcc -c main.c -lncurses
+
+person.o: person.c person.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 2):
+	gcc -c person.c
+
+elevator.o: elevator.c elevator.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 5):
+	gcc -c elevator.c
+
 # files hash-table stats:
-# Load=4/1024=0%, Rehash=0, Collisions=0/14=0%
+# Load=15/1024=1%, Rehash=0, Collisions=0/35=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 18 / storage = 154 B / avg = 8 B
-# current buf: size = 8162 B / used = 154 B / count = 18 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 25 / storage = 203 B / avg = 8 B
+# current buf: size = 8162 B / used = 203 B / count = 25 / avg = 8 B
 
-# strcache performance: lookups = 22 / hit rate = 18%
+# strcache performance: lookups = 48 / hit rate = 47%
 # hash-table stats:
-# Load=18/8192=0%, Rehash=0, Collisions=1/22=5%
-# Finished Make data base on Thu Aug 25 17:47:51 2022
+# Load=25/8192=0%, Rehash=0, Collisions=1/48=2%
+# Finished Make data base on Wed Aug 31 15:09:26 2022
 
  

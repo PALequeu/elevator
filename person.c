@@ -6,7 +6,7 @@ Person* createPerson(int src, int dest) {
     per -> src=src;
     per -> dest=dest;
 
-    return p;
+    return per;
 };
 
 PersonList* insert(Person *p, PersonList *list) {
